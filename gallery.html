@@ -23,8 +23,14 @@
         background-image: url(https://3.bp.blogspot.com/-rHGW-Pj086E/XJqrXq3DJlI/AAAAAAAABB0/kRGUxP_OqkUmicF3bW129ubAa0myCJs9ACKgBGAs/w0/sunset-horizon-scenery-landscape-art-uhdpaper.com-4K-178.jpg);
         background-repeat: no-repeat;
           background-size: cover;
-          
           background-position: center;
+          
+      }
+      .modal-content{
+        font-family: Helvetica;
+        text-anchor: start;
+        opacity: 0.9;
+          
       }
       input{
   width: 70%;
@@ -33,13 +39,13 @@
   margin-top: 6%;
   display: inline-block;
   border: 2px solid rgb(184,186,185);
-  border-radius: 4px;
+  border-radius: 7px;
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 body{
   background-image: url(https://i.pinimg.com/originals/3b/8a/d2/3b8ad2c7b1be2caf24321c852103598a.jpg);
-  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -62,6 +68,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       }
       label{
         font-size: 110%;
+      }
+      .c{
+        background-color:whitesmoke ;
       }
   </style>
 </head>
@@ -88,9 +97,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item" href="bsgall2.html">My travel destinations</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="bsgall1.html">F.S.Korea</a>
+                <a class="dropdown-item" href="mykorea.html">F.S.Korea</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="mykorea.html">My Quotes</a>
+                <a class="dropdown-item" href="bsgall1.html">My Quotes</a>
               </div>
             </li>
           </ul>
@@ -103,24 +112,24 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   <div class="modal fade" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header" style="background-color: rgb(169,238,230);">
-          <h5 style="margin-left: 43%;" class="modal-title" id="exampleModalLabel">Sign in</h5>
+        <div class="modal-header c" >
+          <h5 style="margin-left: 2%;color: blue; font-size: 150%;" class="modal-title" id="exampleModalLabel">Please Sign in.</h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body" style="background-color:rgb(254,250,236);">
+        <div class="modal-body c" >
           <form>
-            <label for="adi"><strong>Username:</strong></label>
+            <label for="adi"><strong>Username:</strong></label><br>
             <input type="text" name="adi" placeholder=" Username"><br><br>
-            <label for="aditya"><strong>Password:</strong></label>
+            <label for="aditya"><strong>Password:</strong></label><br>
             <input type="password" name="aditya" placeholder=" Password">
             <a href="#" style="color: rgb(58, 52, 52);"><p style="margin-left: 65%;"> forgot password?</p></a>
           </form>
         </div>
-        <div class="modal-footer" style="background-color:rgb(243,129,129)">
-          <button  class="btn  btn-success btn-outline-success text-light ">Sign in</button>
-          <button  class="btn  btn-danger btn-outline-danger text-light btn-md" data-dismiss="modal">Close</button>
+        <div class="modal-footer c" >
+          <button  class="btn btn-block btn-lg btn-primary btn-outline-warning text-light " style="background-color: ed;">Sign in</button>
+          
 
         </div>
       </div>
@@ -147,15 +156,15 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
       <div class="carousel-item active">
         <a href="bsgall1.html"><img  src="https://c4.wallpaperflare.com/wallpaper/126/117/95/quote-motivational-digital-art-typography-wallpaper-preview.jpg" class="d-block" alt="..."></a>
         <div class="carousel-caption d-none d-md-block">
-          <h5>My Quotes</h5>
-          <p>I Will Most Likely Choose This.</p>
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
       <div class="carousel-item">
         <a href="mykorea.html"><img src="https://img.freepik.com/free-photo/south-korea-flag-made-metallic-brush-paint-grunge-dark-wall_1379-2493.jpg?size=626&ext=jpg" class="d-block w-100" alt="..."></a>
         <div class="carousel-caption d-none d-md-block">
-          <h5>Fascinating Korea</h5>
-          <p>I Love Korea.</p>
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
         </div>
       </div>
       
