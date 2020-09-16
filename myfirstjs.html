@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href=  
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+          
+
+
+    <style>
+
+        .nav-item{
+            text-align: end;
+           
+        }
+        .navbar-nav{
+            text-align: end;
+            margin-left: 72%;
+        }
+        input{
+            border-radius: 4px;
+            background-color: rgb(253,254,250);
+            border-color: blanchedalmond ;
+            border-style: hidden;
+    
+            border-width: medium;
+            border-spacing: initial;
+            width: 300px;
+            height: 40px;
+
+        }
+        .styling
+        {
+            background-position: center;
+          background-color: rgb(40,40,45);
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-image: url(https://wallpaperaccess.com/full/1994605.jpg);
+          position: relative;
+          font-family:cursive;
+            text-align: center;
+            
+        }
+        .sty{
+            text-align: start;
+        }
+        body{
+            background-color: lightseagreen;
+        }
+        
+    </style>
+
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+ 
+      
+  <script>
+    function sub(){
+        console.log("name:");console.log(document.getElementById("me").value);
+        console.log("Email:"); console.log(document.getElementById("m").value);
+        console.log("Phone:"); console.log(document.getElementById("b").value);
+        console.log("Review:");  console.log(document.getElementById("hy").value);
+        alert("Thank You Boss")
+    }
+</script>
+<body class="bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color:rgb(72,128,177);font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;">
+        <a class="navbar-brand" href="#">Gallery</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse move" id="navbarSupportedContent">
+          <ul class="navbar-nav   " >
+            <li class="nav-item ">
+              <a class="nav-link" href="gallery.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Contact Us</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="bsgall2.html">My travel destinations</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="mykorea.html">F.S.Korea</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="bsgall1.html">My Quotes</a>
+              </div>
+            </li>
+          </ul>
+          <div>
+            <button class="btn btn-md  btn-outline-light my-2 my-sm-0" style="margin-left: 10px;background-color:rgb(0,0,99);" data-toggle="modal" data-target="#exampleModal">Sign in</button>
+          </div>
+        </div>
+      </nav>
+    <div  class="container-fluid jumbotron  styling ">
+        <div class="row">
+
+            <div class="col-12">
+    <form>
+       
+        <div class="fontuser"> 
+        <strong><label> Name:</label></strong>
+        <input  placeholder=" Enter Name" id="me" type="text" required>
+        </div>
+        <br><br><br>
+        <strong><label> Email:</label></strong>
+        <input placeholder=" Enter Email" id="m" type="email" required>
+        <br><br><br>
+        <strong><label>Phone:</label></strong>
+        <input placeholder=" --------------------------" id="b" type="text">
+        <br><br> <br><br>
+    
+        <div>
+            <strong><label>:) Suggestion:</h5></strong>
+        <br>
+        <textarea placeholder="                             Thank You For Your Consent" id="hy" row="50" col="50" style="width: 500px;height: 250px; border-radius: 5px;"></textarea>
+        </div>
+        
+    </form>
+    <button class="btn btn-primary btn-lg " type="submit" onclick="sub();">Submit</button>
+    
+</div>
+</div>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+    
+</html>
