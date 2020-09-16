@@ -12,6 +12,19 @@
 
 
     <style>
+      .modal{
+        background-image: url(https://3.bp.blogspot.com/-rHGW-Pj086E/XJqrXq3DJlI/AAAAAAAABB0/kRGUxP_OqkUmicF3bW129ubAa0myCJs9ACKgBGAs/w0/sunset-horizon-scenery-landscape-art-uhdpaper.com-4K-178.jpg);
+        background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center;
+
+          
+      }
+      .modal-content{
+        font-family: Helvetica;
+        text-anchor: start;
+        opacity: 0.9;
+      }
 
         .nav-item{
             text-align: end;
@@ -97,10 +110,36 @@
             </li>
           </ul>
           <div>
-            <button class="btn btn-md  btn-outline-light my-2 my-sm-0" style="margin-left: 10px;background-color:rgb(0,0,99);" data-toggle="modal" data-target="#exampleModal">Sign in</button>
+            <button class="btn btn-md  btn-outline-light my-2 my-sm-0" style="margin-left: 10px;background-color:rgb(0,0,99);" data-toggle="modal" data-target="#exampleModal">Login</button>
           </div>
         </div>
       </nav>
+      <div class="modal fade" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header c" >
+              <h5 style="margin-left: 2%;color: blue; font-size: 150%;" class="modal-title" id="exampleModalLabel">Please Sign in.</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body c" >
+              <form>
+                <label for="adi"><strong>Username:</strong></label><br>
+                <input type="text" name="adi" placeholder=" Username"><br><br>
+                <label for="aditya"><strong>Password:</strong></label><br>
+                <input type="password" name="aditya" placeholder=" Password">
+                <a href="#" style="color: rgb(58, 52, 52);"><p style="margin-left: 65%;"> forgot password?</p></a>
+              </form>
+            </div>
+            <div class="modal-footer c" >
+              <button  class="btn btn-block btn-lg btn-primary btn-outline-warning text-light " style="background-color: ed;">Sign in</button>
+              
+    
+            </div>
+          </div>
+        </div>
+      </div>
     <div  class="container-fluid jumbotron  styling ">
         <div class="row">
 
