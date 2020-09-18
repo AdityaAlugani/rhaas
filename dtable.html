@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script>
+        document.getElementById("cbait").addEventListener("click",display);
+       
+        var no=1;
+        function display()
+        {
+            
+            var name=document.getElementById("A1").value;
+            var year=document.getElementById("A2").value;
+            var roll=document.getElementById("A3").value;
+            var branch=document.getElementById("A4").value;
+
+            if(name==false || year==false || roll==false || branch==false)
+            {
+                 alert("DO NOT LEAVE ANYTHING BLANK!!!");
+                 return;
+            } 
+            var table=document.getElementById("mytable");
+            var row=table.insertRow(no);
+            var cell1=row.insertCell(0);
+            var cell2=row.insertCell(1);
+            var cell3=row.insertCell(2);
+            var cell4=row.insertCell(3);
+            cell1.innerHTML=name;
+            cell2.innerHTML=year;
+            cell3.innerHTML=roll;
+            cell4.innerHTML=branch;
+            
+
+           
+
+
+        }
+        no=no+1;
+
+    </script>
+
+    <style>
+        table tr th{
+            border:2px black;
+            border-style: solid;
+            font-style: italic;
+            height: 40px;
+            width: 100px;
+            color: darkorange;
+            border-color: whitesmoke;
+            text-align: center;
+           
+        }
+        table tr td{
+            border:2px black;
+            border-style: solid;
+            font-style: italic;
+            height: 40px;
+            width: 100px;
+            color: yellow;
+            border-color:whitesmoke ;
+            text-align: center;
+           
+        }
+        #mytable{
+            margin-top: 5%;
+            margin-left: 30%;
+        }
+        #myform{
+            text-align: left;
+            margin-left: 28%;
+            padding-top: 20px;
+        }
+        input{
+            border-style: groove;
+            padding: 1%;
+            border-radius: 5px;
+        }
+        body{
+            background-image: url(https://i.pinimg.com/originals/ad/47/af/ad47af29ad50df1477b9413f9d521db0.jpg);
+            background-position: center;
+            background-size: cover;
+            
+        }
+        label{
+            color: whitesmoke;
+        }
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+      <div class="container-fluid">
+      <form id="myform" >
+          <h3 style="color: lightgrey;">Start Typing below</h1>
+        <strong><label style="margin-right: 1%;">Name:</label></strong>
+        <input id="A1" placeholder=" enter name" type="text">
+    <strong><label style="margin-left: 1%;">Year(pr):</label></strong>
+         <input id="A2" placeholder=" enter year" type="text"><br /><br>
+        <strong>   <label>Roll.No:</label></strong>
+          <input id="A3" placeholder=" enter rollnum" type="text">
+        <strong><label style="margin-left: 1%;">Branch:</label></strong>
+         <input id="A4" placeholder=" enter branch" type="text"><br /><br>
+        </form>
+        <button style="margin-left: 45%;margin-top: 1%;margin-bottom: 1%; " class="btn btn-danger btn-outline-warning" type="button" onclick="display()">click to add</button>
+    </div>
+
+    <div class="container" >
+        <table id="mytable">
+            <tr>
+                <th>Name</th>
+                <th>Year</th>
+                <th>Roll</th>
+                <th>Group</th>
+            </tr>
+        </table>
+        
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

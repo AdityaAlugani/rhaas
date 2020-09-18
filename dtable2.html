@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script>
+        function sub(){
+            var lst=[{name:"A.Aditya",branch:"CSE",section:"C"},{name:"Jayanth Abhay",branch:"CSE",section:"C"},{name:"Madhu Meher",branch:"CSE",section:"C"},{name:"Ram",branch:"CSE",section:"B"},{name:"Shyam",branch:"IT",section:"A"},{name:"Abhay",branch:"CSE",section:"A"},{name:"Harsha",branch:"CSE",section:"C"},{name:"Sujay",branch:"CSE",section:"B"},{name:"Madhav",branch:"CSE",section:"C"},{name:"Ramesh",branch:"CSE",section:"C"},];
+            document.write("<table border='10' style='margin-left:38%; border-style:double; border-color:red; font-size:20px;font-family:cursive'")
+            document.write("<tr>");
+                document.write("<th style='color:blue'>");
+                document.write("No.");
+                document.write("</th>");
+                document.write("<th style='color:blue'>");
+                document.write("Name");
+                document.write("</th>");
+                document.write("<th style='color:blue'>");
+                document.write("Branch");
+                document.write("</th>");
+                document.write("<th style='color:blue'>");
+                document.write("Section");
+                document.write("</th>");
+                document.write("</tr>");
+            for(var i=0;i<lst.length;i++){
+                document.write("<tr>");
+                document.write("<th style='color:green'>");
+                document.write(i+1,".");
+                document.write("</th>");
+                document.write("<th>");
+                document.write(lst[i].name);
+                document.write("</th>");
+                document.write("<th>");
+                document.write(lst[i].branch);
+                document.write("</th>");
+                document.write("<th>");
+                document.write(lst[i].section);
+                document.write("</th>");
+                document.write("</tr>");
+            }
+           document.write("</table>")
+        }
+    </script>
+    <style>
+        .st{
+            color: blue;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <div class="container">
+    <h1>Please Click Button Below</h1>
+    <button type="button" onclick="sub()" class="btn btn-danger btn-lg">yes click me</button>
+</div>
+</body>
+</html>
