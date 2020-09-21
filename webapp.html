@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alef:wght@700&family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Marvel" />
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <script>
+        
+       
+        function s(){
+        var cnty=document.getElementById("i").value;
+        var city=document.getElementById("ii").value;
+
+        const icity=city;
+
+        const url=`https://api.openweathermap.org/data/2.5/weather?q=${icity},${cnty}&appid=d2559d3952a6e977d4c15855ddb93ea0`;
+        var req=new XMLHttpRequest();
+        req.open('GET',url,true);
+        req.onload=function(){
+            if(req.status>=200 && req.status<400){
+                var resp=JSON.parse(req.responseText);
+                console.log(resp);
+                
+                document.getElementById("A1").innerHTML=`Temperature:${Math.ceil(resp.main.temp-273)}${"&#8451"}`;
+                document.getElementById("A4").innerHTML=`Humidity:${resp.main.humidity}%`;
+                document.getElementById("A5").innerHTML=`Wind:${resp.wind.speed}Knots`;
+                document.getElementById("b4").innerHTML=`${resp.name}`;
+                document.getElementById("b1").innerHTML=`Description: ${resp.weather["0"]["description"]}`;
+                document.getElementById("b2").innerHTML=`Latitude: ${resp.coord["lat"]}`;
+                document.getElementById("b3").innerHTML=`Longitude: ${resp.coord["lon"]}`;
+
+                alert("SUCCESS!!! PLEASE SCROLL TO THE END FOR ADDITIONAL DETAILS");
+
+        
+            }
+            else{
+                alert("ENTER VALID DETAILS")
+                console.log("error");
+            }
+
+        };
+        req.send();
+        document.getElementById("myButton").onclick = function () {
+        location.href = "www.yoursite.com";
+    };
+
+    }
+    </script>
+    <style>
+      input{
+          padding:5px ;
+          display: inline-block;
+          border-radius: 5px;
+          border-style: solid;
+      }
+      
+      .drop{
+          margin-bottom: 1%;
+      }
+      .mybtn{
+          margin-bottom: 4px;
+      }
+      .roun{
+          border-radius: 20%;
+      }
+      .rad{
+        border-radius: 20%;
+      }
+      .late{
+        font-family: 'Alef', sans-serif;
+      }
+      .lat{
+        font-family: 'Open Sans', sans-serif;
+      }
+      
+      body{
+          background-image: url(https://www.designyourway.net/blog/wp-content/uploads/2018/08/a0026461_508d3d23cd366-1250x768.jpg);
+          background-position: center;
+          background-size: cover;
+         
+          background-repeat: no-repeat;
+      }
+      .latte{
+        font-family: 'Open Sans', sans-serif;
+        font-size: 30px;
+        font-weight: bolder;
+      }
+
+    </style>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+
+    
+    <div class="modal fade lat " id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog " role="document">
+          <div class="modal-content">
+            <div class="modal-header" >
+              <h4 style="font-weight:bolder; text-align: center;" class="modal-title" id="b4">Request for details first(blue arrow beside input fields)</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h4 id="b1"></h4><br>
+              <h4 id="b2"></h4><br>
+              <h4 id="b3"></h4><br>
+            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-lg btn-block btn-danger" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="jumbotron jumbotron-fluid bg-transparent">
+        <div class="container">
+            <h1 style="font-family: 'Permanent Marker', cursive; color: rgb(60,57,55); " class="display-3">Weather Made Easy</h1>
+            <p class="lead">search below</p>
+            <hr class="my-2">
+            <p>fill all the blanks**</p>
+            <div class="container late" >
+                <div class="row">
+                    <div class="col-7">
+                        <div class="dropdown">
+                            <button  class="drop btn btn-sm btn-secondary dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              ex <span class="caret"></span></button>
+                            <div class="dropdown-menu" >        
+                              <a class="dropdown-item" value="in" id="C1">India</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" id="C2">Korea</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" id="C3">U.S.A</a>
+                            </div>
+                           
+                         <input id="i" required  placeholder="   type country here" type="text"> <input required id="ii" placeholder="   type city here" type="text">
+                        
+                         <button type="submit" class="btn btn-lg btn-primary fas fa-arrow-alt-circle-right mybtn " onclick="s()"></button>
+                         
+                        </div>
+                    </div>
+                    <div class="col-1">
+                       
+                </div>
+            
+                
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3" style="text-align: center;">
+                <img  src="https://thumbs.dreamstime.com/b/thermometer-vector-sun-heat-temperature-icon-thermometer-vector-icon-sun-heat-temperature-scale-summer-weather-119319936.jpg" class="img-fluid rad">
+                <div class="row">
+                    <div class="col">
+                       
+                        <h1 class="latte" id="A1"> </h2> 
+                    </div>
+                </div>
+             
+            </div>
+            <div class="col-1" style="text-align: center;">
+                
+             
+            </div>
+            <div class="col-3" style="text-align: center;">
+                <img  src="https://lh3.googleusercontent.com/proxy/zQlthTwBEAM3ORq8ATzLEFuP15KA_tc990gAyBXed5y99An1rqghQvQRgqvoBj6J6PE3oDAutz7XCYJ9sB7XAdG3jXyJIpVdEMkuZ091gHCrAKGDp0LYvNtXlFLGcA" class="img-fluid roun">
+                <div class="row">
+                    <div class="col">
+                       
+                        <h1 class="latte" id="A4"> </h2> 
+                    </div>
+                </div>
+             
+            </div>
+            <div class="col-1" style="text-align: center;">
+                
+             
+            </div>
+            <div class="col-3" style="text-align: center;">
+                <img  src="https://png.pngtree.com/png-vector/20190411/ourlarge/pngtree-vector-wind-icon-png-image_925468.jpg" class="img-fluid rou rad">
+                <div class="row">
+                    <div class="col">
+                       
+                        <h1 class="latte" id="A5"> </h2> 
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div>
+        <button type="submit"  style="margin-top:10% ;" data-toggle="modal" data-target="#exampleModal" class="btn btn-lg btn-block btn-info">Click for full details</button>
+
+    </div>
+
+      
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
